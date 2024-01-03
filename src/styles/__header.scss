@@ -1,0 +1,135 @@
+header {
+  display: flex;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px;
+    width: 100%;
+
+    background-color: $support-06;
+  }
+
+  .navigation {
+    display: flex;
+    list-style: none;
+    column-gap: 24px;
+  }
+
+  .navigation a {
+    color: #929292;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .header-content h1 {
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .title-perfil {
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .img-perfil {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+
+  .navigation,
+  .perfil {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .menu-hamb {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 980px) {
+    .navigation,
+    .perfil {
+      width: 100%;
+      max-width: 100px;
+    }
+
+    .title-perfil {
+      display: none;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .active {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(16, 16, 16, .9);
+      z-index: 1;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navigation a {
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    .menu-hamb {
+      display: block;
+      font-size: 24px;
+      color: #fff;
+
+      z-index: 3;
+    }
+
+    .header-content h1 {
+      font-size: 24px;
+      z-index: 3;
+    }
+
+    .img-perfil {
+      z-index: 3;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .header-content h1 {
+      font-size: 16px;
+    }
+
+    .img-perfil {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

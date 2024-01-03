@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GT Eesti Pro Display", sans-serif;
+}
+
+.app {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+}
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px;
+  width: 100%;
+  background-color: #131313;
+}
+header .navigation {
+  display: flex;
+  list-style: none;
+  column-gap: 24px;
+}
+header .navigation a {
+  color: #929292;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+header .header-content h1 {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header .perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+header .title-perfil {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+header .img-perfil {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+header .navigation,
+header .perfil {
+  width: 100%;
+  max-width: 200px;
+}
+header .menu-hamb {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  header .navigation,
+  header .perfil {
+    width: 100%;
+    max-width: 100px;
+  }
+  header .title-perfil {
+    display: none;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .active {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.9);
+    z-index: 1;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  header .navigation a {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  header .menu-hamb {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    z-index: 3;
+  }
+  header .header-content h1 {
+    font-size: 24px;
+    z-index: 3;
+  }
+  header .img-perfil {
+    z-index: 3;
+  }
+}
+@media (max-width: 400px) {
+  header .header-content h1 {
+    font-size: 16px;
+  }
+  header .img-perfil {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+main {
+  background: url(../images/background.png);
+  background-size: cover;
+  height: 100dvh;
+  width: 100%;
+}
+main .main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  justify-content: center;
+  padding: 0 48px;
+}
+main .main-content img {
+  width: 250px;
+  height: 90px;
+}
+main .main-content strong {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+main .bloquinhos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+main .bloquinhos span {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+main .btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #FFF;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  main .main-content {
+    align-items: center;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #131313;
+  position: relative;
+}
+footer .timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 100%;
+  width: 0%;
+  height: 4px;
+  background-color: #FFF;
+}
+footer .timeline::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: block;
+}
+footer .btn-footer {
+  font-size: 32px;
+  color: #F1F0F0;
+}
+footer .content-footer {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 24px;
+  align-items: center;
+}
+footer .cnt1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  cursor: pointer;
+}
+footer .cnt1 .text-music h1 {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+footer .cnt1 .text-music span {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+footer .cnt2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  cursor: pointer;
+}
+footer .cnt2 .btn-play {
+  width: 48px;
+  height: 48px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+footer .cnt3 {
+  display: flex;
+  gap: 80px;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  footer .cnt3 {
+    display: none;
+  }
+  footer .content-footer {
+    position: relative;
+    flex-direction: column;
+  }
+  footer .cnt1 {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .heart {
+    order: 1;
+  }
+}
+@media (max-width: 400px) {
+  footer .btn-footer {
+    font-size: 18px;
+  }
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("/src/fonts/GT-Eesti-Display-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("/src/fonts/GT-Eesti-Display-Medium.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+body {
+  height: 100dvh;
+}
+
+/*# sourceMappingURL=main.css.map */

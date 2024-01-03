@@ -1,0 +1,26 @@
+@use "./default.scss";
+@import "./_colors";
+@import './app.scss';
+@import "./_header.scss";
+@import "./_main.scss";
+@import "./_footer";
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("/src/fonts/GT-Eesti-Display-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GT Eesti Pro Display";
+  src: url("/src/fonts/GT-Eesti-Display-Medium.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+body {
+  height: 100dvh;
+}
